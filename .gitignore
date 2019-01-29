@@ -1,0 +1,47 @@
+# Xcode
+build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+# *.xcworkspace
+# !default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+*.gcno
+*.gcda
+
+# Playground
+*.xctimeline
+
+# CocoaPods
+Pods/*
+
+# Carthage
+Carthage/*
+
+# Fastlane
+fastlane/report.xml
+fastlane/screenshots
+fastlane/test_output
+
+# OS X
+.DS_Store
+
+# OCLint
+xcodebuild.log
+compile_commands.json
+
+# Deployment
+.bundle
+builds
+decrypted
+vendor
+
+# Coverage
+cobertura.xml

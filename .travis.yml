@@ -1,0 +1,19 @@
+language: swift
+osx_image: xcode10
+cache:
+  bundler: true
+  directories:
+    - vendor/bundle
+    - Pods
+
+before_install:
+  - brew update
+  - bundle install
+  - pod repo update
+  - pod install
+
+script:
+  - xcodebuild -workspace TAT.xcworkspace -scheme TAT -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+
+notifications:
+  email: false
