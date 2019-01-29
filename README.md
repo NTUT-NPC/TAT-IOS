@@ -4,13 +4,14 @@ TAT-IOS
 ![ios](https://img.shields.io/badge/platform-iOS-red.svg) 
 ![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)
 ![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)
+[![Build Status](https://travis-ci.com/NTUT-NPC/TAT-IOS.svg?branch=develop)](https://travis-ci.com/NTUT-NPC/TAT-IOS)
 
 ## How to contribute
 
 1. clone the project
 2. install homebrew, checkout [homebrew](https://brew.sh/) to install
-3. install ruby, `brew install ruby@2.4`
-4. install bundle, `/usr/local/bin/gem install bundler`
+3. install ruby `brew install ruby@2.4`
+4. install bundle `/usr/local/bin/gem install bundler`
 5. install all gems `bundle install`
 6. install CocoaPods gems `bundle exec pod install` 
 7. if swiftLint doesn't show the warnning, follew [swiftLint](https://github.com/realm/SwiftLint) to set up swiftLint

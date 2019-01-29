@@ -14,6 +14,8 @@ before_install:
 
 script:
   - xcodebuild -workspace TAT.xcworkspace -scheme TAT -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  - bundle exec danger
 
 notifications:
   email: false
+  slack: npc-designer:TIJP6Wix1qqtqFUqWvMjBw4U
