@@ -5,6 +5,7 @@ TAT-IOS
 ![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)
 ![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)
 [![Build Status](https://travis-ci.com/NTUT-NPC/TAT-IOS.svg?branch=develop)](https://travis-ci.com/NTUT-NPC/TAT-IOS)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## How to contribute
 
