@@ -12,6 +12,8 @@ target 'TAT' do
   pod 'RxSwiftExt'  
   pod 'NSObject+Rx'
   pod "RxGesture"
+  pod 'Moya/RxSwift', '~> 12.0'
+  pod 'SwiftyJSON'
 
   # UI
   pod 'SnapKit'

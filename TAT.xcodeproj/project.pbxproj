@@ -13,6 +13,8 @@
 		B6115893220061D000C28BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6115892220061D000C28BAA /* Assets.xcassets */; };
 		B6115896220061D000C28BAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6115894220061D000C28BAA /* LaunchScreen.storyboard */; };
 		B61158A4220062E700C28BAA /* CurriculumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158A3220062E700C28BAA /* CurriculumViewController.swift */; };
+		B61158D12205F80A00C28BAA /* APITargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158D02205F80A00C28BAA /* APITargetType.swift */; };
+		B61158D52205F97900C28BAA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158D42205F97900C28BAA /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B6115895220061D000C28BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6115897220061D000C28BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B61158A3220062E700C28BAA /* CurriculumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumViewController.swift; sourceTree = "<group>"; };
+		B61158D02205F80A00C28BAA /* APITargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITargetType.swift; sourceTree = "<group>"; };
+		B61158D42205F97900C28BAA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 		B611588A220061CC00C28BAA /* TAT */ = {
 			isa = PBXGroup;
 			children = (
+				B61158CC2205F74000C28BAA /* Networking */,
 				B61158A02200620500C28BAA /* Supporting Files */,
 				B611589F220061FE00C28BAA /* ViewModels */,
 				B611589E220061F600C28BAA /* Models */,
@@ -125,6 +130,40 @@
 				B61158A3220062E700C28BAA /* CurriculumViewController.swift */,
 			);
 			path = Curriculum;
+			sourceTree = "<group>";
+		};
+		B61158CC2205F74000C28BAA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B61158CF2205F76000C28BAA /* API */,
+				B61158CE2205F75700C28BAA /* Protocol */,
+				B61158CD2205F74F00C28BAA /* Manager */,
+			);
+			name = Networking;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		B61158CD2205F74F00C28BAA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B61158D42205F97900C28BAA /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B61158CE2205F75700C28BAA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B61158D02205F80A00C28BAA /* APITargetType.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B61158CF2205F76000C28BAA /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		FC90B12D17269E3C7BEC7FA9 /* Pods */ = {
@@ -236,27 +275,35 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TAT/Pods-TAT-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -288,6 +335,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B61158A4220062E700C28BAA /* CurriculumViewController.swift in Sources */,
+				B61158D12205F80A00C28BAA /* APITargetType.swift in Sources */,
+				B61158D52205F97900C28BAA /* APIManager.swift in Sources */,
 				B611588E220061CC00C28BAA /* BaseViewController.swift in Sources */,
 				B611588C220061CC00C28BAA /* AppDelegate.swift in Sources */,
 			);
