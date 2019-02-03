@@ -9,6 +9,7 @@
 import Moya
 import RxSwift
 import RxCocoa
+import SwiftyJSON
 
 extension APIType {
 
@@ -29,7 +30,7 @@ extension APIType {
     // MARK: - APITargetType
 
     var path: String {
-      return "api/login.json"
+      return "/api/login"
     }
 
     var method: Moya.Method {
@@ -51,17 +52,20 @@ extension APIType {
 extension APIManager {
 
   func login(with studentID: String, and password: String) -> Observable<AnyObject> {
-    TATLog("login....")
     let target = MultiTarget(APIType.Login(with: studentID, and: password))
     return Observable.create { [weak self] (observer) -> Disposable in
       _ = self?.provider.rx.request(target)
         .asObservable()
-        .subscribe(onNext: { response in
-          observer.onNext(response)
+        .filterSuccessfulStatusCodes()
+        .mapJSON()
+        .parseResponseDirectly(asType: Token.self)
+        .subscribe(onNext: { (token) in
+          observer.onNext(token as AnyObject)
           observer.onCompleted()
-          self?.TATLog(response)
-        }, onError: { (error) in
+          self?.debugPrint("token is \(token)")
+        }, onError: { [weak self] (error) in
           observer.onError(error)
+          self?.debugPrint("failed to login with: \(error)")
         })
       return Disposables.create()
     }

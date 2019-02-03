@@ -20,9 +20,7 @@ extension APITargetType {
   }
 
   var headers: [String: String]? {
-    return [
-      "Content-Type": "application/json"
-    ]
+    return [:]
   }
 
   var sampleData: Data {

@@ -16,8 +16,9 @@
 		B6DE6BAA22074B0900D5880E /* APIManager+login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DE2207486E00C28BAA /* APIManager+login.swift */; };
 		B6DE6BAB22074B0900D5880E /* APITargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DA2207486E00C28BAA /* APITargetType.swift */; };
 		B6DE6BAC22074B0900D5880E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DC2207486E00C28BAA /* APIManager.swift */; };
-		B6DE6BAF22074C8B00D5880E /* NSObject+TATLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BAE22074C8400D5880E /* NSObject+TATLog.swift */; };
-		B6DE6BB322074EC200D5880E /* CurriculumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BB222074EC200D5880E /* CurriculumViewModel.swift */; };
+		B6DE6BB62207599E00D5880E /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BB52207599E00D5880E /* DebugPrint.swift */; };
+		B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */; };
+		B6DE6BBD220760F400D5880E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BBC220760F400D5880E /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +35,9 @@
 		B61158DA2207486E00C28BAA /* APITargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITargetType.swift; sourceTree = "<group>"; };
 		B61158DC2207486E00C28BAA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		B61158DE2207486E00C28BAA /* APIManager+login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+login.swift"; sourceTree = "<group>"; };
-		B6DE6BAE22074C8400D5880E /* NSObject+TATLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+TATLog.swift"; sourceTree = "<group>"; };
-		B6DE6BB222074EC200D5880E /* CurriculumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumViewModel.swift; sourceTree = "<group>"; };
+		B6DE6BB52207599E00D5880E /* DebugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPrint.swift; sourceTree = "<group>"; };
+		B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Parsing.swift"; sourceTree = "<group>"; };
+		B6DE6BBC220760F400D5880E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,8 @@
 		B611588A220061CC00C28BAA /* TAT */ = {
 			isa = PBXGroup;
 			children = (
-				B6DE6BAD22074C8400D5880E /* Extension */,
+				B6DE6BB722075B1A00D5880E /* Extensions */,
+				B6DE6BB42207598D00D5880E /* Protocols */,
 				B61158D82207486E00C28BAA /* Networking */,
 				B611589E220061F600C28BAA /* Models */,
 				B6DE6BB022074E9A00D5880E /* ViewModels */,
@@ -93,8 +96,8 @@
 		B611589D220061EE00C28BAA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B61158A22200629300C28BAA /* Curriculum */,
 				B61158A12200626D00C28BAA /* Base */,
+				B61158A22200629300C28BAA /* Curriculum */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -102,6 +105,7 @@
 		B611589E220061F600C28BAA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B6DE6BBC220760F400D5880E /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,28 +170,27 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		B6DE6BAD22074C8400D5880E /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				B6DE6BAE22074C8400D5880E /* NSObject+TATLog.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		B6DE6BB022074E9A00D5880E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B6DE6BB122074EAA00D5880E /* Curriculum */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		B6DE6BB122074EAA00D5880E /* Curriculum */ = {
+		B6DE6BB42207598D00D5880E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B6DE6BB222074EC200D5880E /* CurriculumViewModel.swift */,
+				B6DE6BB52207599E00D5880E /* DebugPrint.swift */,
 			);
-			path = Curriculum;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B6DE6BB722075B1A00D5880E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FC90B12D17269E3C7BEC7FA9 /* Pods */ = {
@@ -358,14 +361,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6DE6BAF22074C8B00D5880E /* NSObject+TATLog.swift in Sources */,
+				B6DE6BBD220760F400D5880E /* Token.swift in Sources */,
 				B6DE6BAA22074B0900D5880E /* APIManager+login.swift in Sources */,
 				B6DE6BAB22074B0900D5880E /* APITargetType.swift in Sources */,
-				B6DE6BB322074EC200D5880E /* CurriculumViewModel.swift in Sources */,
 				B6DE6BAC22074B0900D5880E /* APIManager.swift in Sources */,
 				B61158A4220062E700C28BAA /* CurriculumViewController.swift in Sources */,
+				B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */,
 				B611588E220061CC00C28BAA /* BaseViewController.swift in Sources */,
 				B611588C220061CC00C28BAA /* AppDelegate.swift in Sources */,
+				B6DE6BB62207599E00D5880E /* DebugPrint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

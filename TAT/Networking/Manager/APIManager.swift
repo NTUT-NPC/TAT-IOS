@@ -11,9 +11,13 @@ import Moya
 
 enum APIType { }
 
-final class APIManager: NSObject {
+final class APIManager: NSObject, DebugPrint {
 
   static let shared = APIManager()
+
+  enum Keys: String {
+    case token
+  }
 
   private override init() {}
   public let provider = MoyaProvider<MultiTarget>()
