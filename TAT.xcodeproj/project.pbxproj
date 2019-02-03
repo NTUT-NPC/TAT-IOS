@@ -13,8 +13,11 @@
 		B6115893220061D000C28BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6115892220061D000C28BAA /* Assets.xcassets */; };
 		B6115896220061D000C28BAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6115894220061D000C28BAA /* LaunchScreen.storyboard */; };
 		B61158A4220062E700C28BAA /* CurriculumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158A3220062E700C28BAA /* CurriculumViewController.swift */; };
-		B61158D12205F80A00C28BAA /* APITargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158D02205F80A00C28BAA /* APITargetType.swift */; };
-		B61158D52205F97900C28BAA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158D42205F97900C28BAA /* APIManager.swift */; };
+		B6DE6BAA22074B0900D5880E /* APIManager+login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DE2207486E00C28BAA /* APIManager+login.swift */; };
+		B6DE6BAB22074B0900D5880E /* APITargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DA2207486E00C28BAA /* APITargetType.swift */; };
+		B6DE6BAC22074B0900D5880E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DC2207486E00C28BAA /* APIManager.swift */; };
+		B6DE6BAF22074C8B00D5880E /* NSObject+TATLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BAE22074C8400D5880E /* NSObject+TATLog.swift */; };
+		B6DE6BB322074EC200D5880E /* CurriculumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BB222074EC200D5880E /* CurriculumViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +31,11 @@
 		B6115895220061D000C28BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6115897220061D000C28BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B61158A3220062E700C28BAA /* CurriculumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumViewController.swift; sourceTree = "<group>"; };
-		B61158D02205F80A00C28BAA /* APITargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITargetType.swift; sourceTree = "<group>"; };
-		B61158D42205F97900C28BAA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B61158DA2207486E00C28BAA /* APITargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITargetType.swift; sourceTree = "<group>"; };
+		B61158DC2207486E00C28BAA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B61158DE2207486E00C28BAA /* APIManager+login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+login.swift"; sourceTree = "<group>"; };
+		B6DE6BAE22074C8400D5880E /* NSObject+TATLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+TATLog.swift"; sourceTree = "<group>"; };
+		B6DE6BB222074EC200D5880E /* CurriculumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +79,12 @@
 		B611588A220061CC00C28BAA /* TAT */ = {
 			isa = PBXGroup;
 			children = (
-				B61158CC2205F74000C28BAA /* Networking */,
-				B61158A02200620500C28BAA /* Supporting Files */,
-				B611589F220061FE00C28BAA /* ViewModels */,
+				B6DE6BAD22074C8400D5880E /* Extension */,
+				B61158D82207486E00C28BAA /* Networking */,
 				B611589E220061F600C28BAA /* Models */,
+				B6DE6BB022074E9A00D5880E /* ViewModels */,
 				B611589D220061EE00C28BAA /* ViewControllers */,
+				B61158A02200620500C28BAA /* Supporting Files */,
 				B6115897220061D000C28BAA /* Info.plist */,
 			);
 			path = TAT;
@@ -97,13 +104,6 @@
 			children = (
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		B611589F220061FE00C28BAA /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		B61158A02200620500C28BAA /* Supporting Files */ = {
@@ -132,38 +132,62 @@
 			path = Curriculum;
 			sourceTree = "<group>";
 		};
-		B61158CC2205F74000C28BAA /* Networking */ = {
+		B61158D82207486E00C28BAA /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				B61158CF2205F76000C28BAA /* API */,
-				B61158CE2205F75700C28BAA /* Protocol */,
-				B61158CD2205F74F00C28BAA /* Manager */,
+				B61158DD2207486E00C28BAA /* API */,
+				B61158D92207486E00C28BAA /* Protocol */,
+				B61158DB2207486E00C28BAA /* Manager */,
 			);
-			name = Networking;
-			path = "New Group";
+			path = Networking;
 			sourceTree = "<group>";
 		};
-		B61158CD2205F74F00C28BAA /* Manager */ = {
+		B61158D92207486E00C28BAA /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				B61158D42205F97900C28BAA /* APIManager.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		B61158CE2205F75700C28BAA /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				B61158D02205F80A00C28BAA /* APITargetType.swift */,
+				B61158DA2207486E00C28BAA /* APITargetType.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		B61158CF2205F76000C28BAA /* API */ = {
+		B61158DB2207486E00C28BAA /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				B61158DC2207486E00C28BAA /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B61158DD2207486E00C28BAA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B61158DE2207486E00C28BAA /* APIManager+login.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		B6DE6BAD22074C8400D5880E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE6BAE22074C8400D5880E /* NSObject+TATLog.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B6DE6BB022074E9A00D5880E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE6BB122074EAA00D5880E /* Curriculum */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B6DE6BB122074EAA00D5880E /* Curriculum */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE6BB222074EC200D5880E /* CurriculumViewModel.swift */,
+			);
+			path = Curriculum;
 			sourceTree = "<group>";
 		};
 		FC90B12D17269E3C7BEC7FA9 /* Pods */ = {
@@ -334,9 +358,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6DE6BAF22074C8B00D5880E /* NSObject+TATLog.swift in Sources */,
+				B6DE6BAA22074B0900D5880E /* APIManager+login.swift in Sources */,
+				B6DE6BAB22074B0900D5880E /* APITargetType.swift in Sources */,
+				B6DE6BB322074EC200D5880E /* CurriculumViewModel.swift in Sources */,
+				B6DE6BAC22074B0900D5880E /* APIManager.swift in Sources */,
 				B61158A4220062E700C28BAA /* CurriculumViewController.swift in Sources */,
-				B61158D12205F80A00C28BAA /* APITargetType.swift in Sources */,
-				B61158D52205F97900C28BAA /* APIManager.swift in Sources */,
 				B611588E220061CC00C28BAA /* BaseViewController.swift in Sources */,
 				B611588C220061CC00C28BAA /* AppDelegate.swift in Sources */,
 			);

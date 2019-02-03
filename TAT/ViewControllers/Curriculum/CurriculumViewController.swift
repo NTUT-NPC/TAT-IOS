@@ -7,5 +7,20 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class CurriculumViewController: BaseViewController {}
+class CurriculumViewController: BaseViewController {
+
+  // MARK: - Properties
+
+  private let viewModel = CurriculumViewModel()
+
+  // MARK: - Life Cycle
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    viewModel.login()
+  }
+
+}

@@ -1,5 +1,5 @@
 //
-//  NSObject+debugPrint.swift
+//  NSObject+TATLog.swift
 //  TAT
 //
 //  Created by Jamfly on 2019/1/30.
@@ -10,7 +10,7 @@ import Foundation
 
 extension NSObject {
 
-  func debugPrint(_ text: String) {
+  func TATLog(_ text: Any) {
     #if DEBUG
     print(text)
     #endif

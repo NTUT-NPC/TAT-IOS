@@ -16,12 +16,12 @@ extension APITargetType {
   // MARK: - TargetType
 
   var baseURL: URL {
-    return URL(string: "api.ntut.club")!
+    return URL(string: "https://api.ntut.club")!
   }
 
   var headers: [String: String]? {
     return [
-      "Content-Type": "application/json",
+      "Content-Type": "application/json"
     ]
   }
 
