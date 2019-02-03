@@ -29,10 +29,6 @@ extension Observable: DebugPrint {
     return self.map { (mapjson) in
       do {
         let json = JSON(mapjson)
-        self.debugPrint(keyPath)
-        self.debugPrint(json)
-        self.debugPrint(type)
-        self.debugPrint(json[keyPath])
         let data = try json[keyPath].rawData()
         return try JSONDecoder().decode(T.self, from: data) as Any
       } catch {
