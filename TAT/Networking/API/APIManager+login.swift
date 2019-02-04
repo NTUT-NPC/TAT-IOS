@@ -63,6 +63,7 @@ extension APIManager {
           observer.onNext(token as AnyObject)
           observer.onCompleted()
           self?.debugPrint("token is \(token)")
+          UserDefaults.standard.set(token, forKey: "token")
         }, onError: { [weak self] (error) in
           observer.onError(error)
           self?.debugPrint("failed to login with: \(error)")
