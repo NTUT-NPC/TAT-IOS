@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.8.1)
+  - Alamofire (4.8.0)
   - IQKeyboardManagerSwift (6.2.0)
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
@@ -27,7 +27,7 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwiftExt/Core
   - SnapKit (4.2.0)
-  - SwiftLint (0.30.1)
+  - SwiftLint (0.29.3)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
@@ -59,7 +59,7 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
@@ -70,7 +70,7 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
+  SwiftLint: bfa7ca7b4d170cfaf0d236ca3ffd969e88a2f002
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
 PODFILE CHECKSUM: 1f8aefc17de74c3c681480333e2f209b09ee48d4
