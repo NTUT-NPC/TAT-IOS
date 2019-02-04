@@ -65,9 +65,8 @@ extension APIManager {
           #if DEBUG
           print("token is \(token)")
           #endif
-          if let data = try? NSKeyedArchiver.archivedData(withRootObject: token, requiringSecureCoding: false) {
-             UserDefaults.standard.set(data, forKey: "token")
-          }
+          guard let token = token as? Token else { return }
+          UserDefaults.standard.set(token.tokenString, forKey: "token")
         }, onError: { (error) in
           observer.onError(error)
           #if DEBUG

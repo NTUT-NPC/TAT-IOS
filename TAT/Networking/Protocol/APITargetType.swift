@@ -20,11 +20,10 @@ extension APITargetType {
   }
 
   var headers: [String: String]? {
-    guard let object = UserDefaults.standard.object(forKey: "token"),
-      let token = object as? Token else {
+    guard let token = UserDefaults.standard.string(forKey: "token") else {
       return [:]
     }
-    return ["Authorization": token.tokenString]
+    return ["Authorization": token]
   }
 
   var sampleData: Data {
