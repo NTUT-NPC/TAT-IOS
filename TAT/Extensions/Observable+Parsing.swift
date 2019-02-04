@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import SwiftyJSON
 
-extension Observable: DebugPrint {
+extension Observable {
 
   func parseResponseDirectly<T: Codable>(asType type: T.Type) -> Observable<Any> {
     return self.map { (mapjson) in
@@ -19,7 +19,9 @@ extension Observable: DebugPrint {
         let data = try json.rawData()
         return try JSONDecoder().decode(T.self, from: data) as Any
       } catch {
-        self.debugPrint("Error: ParseResponse can't fetch data with type \(type)")
+        #if DEBUG
+        print("Error: ParseResponse can't fetch data with type \(type)")
+        #endif
         return []
       }
     }
@@ -32,7 +34,9 @@ extension Observable: DebugPrint {
         let data = try json[keyPath].rawData()
         return try JSONDecoder().decode(T.self, from: data) as Any
       } catch {
-        self.debugPrint("Error: ParseResponse can't fetch data with keypath \(keyPath)")
+        #if DEBUG
+        print("Error: ParseResponse can't fetch data with keypath \(keyPath)")
+        #endif
         return []
       }
     }
@@ -46,7 +50,9 @@ extension Observable: DebugPrint {
         let data = try json[keyPath].rawData()
         return (try JSONDecoder().decode([T].self, from: data) as [Any], totalNumber)
       } catch {
-        self.debugPrint("Error: ParsePagination Can't fetch pagination data with keypath: \(keyPath)")
+        #if DEBUG
+        print("Error: ParsePagination Can't fetch pagination data with keypath: \(keyPath)")
+        #endif
         return ([], 0)
       }
     }

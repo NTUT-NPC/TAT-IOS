@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Token: Codable, DebugPrint {
+class Token: NSObject, Codable {
 
   var tokenString: String = ""
 
@@ -23,7 +23,9 @@ class Token: Codable, DebugPrint {
       tokenString = try container.decode(String.self,
                                           forKey: .tokenString)
     } catch {
-      debugPrint("failed to decode token")
+      #if DEBUG
+      print("failed to decode token")
+      #endif
     }
   }
 

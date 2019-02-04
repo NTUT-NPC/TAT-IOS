@@ -16,7 +16,6 @@
 		B6DE6BAA22074B0900D5880E /* APIManager+login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DE2207486E00C28BAA /* APIManager+login.swift */; };
 		B6DE6BAB22074B0900D5880E /* APITargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DA2207486E00C28BAA /* APITargetType.swift */; };
 		B6DE6BAC22074B0900D5880E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DC2207486E00C28BAA /* APIManager.swift */; };
-		B6DE6BB62207599E00D5880E /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BB52207599E00D5880E /* DebugPrint.swift */; };
 		B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */; };
 		B6DE6BBD220760F400D5880E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BBC220760F400D5880E /* Token.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +34,6 @@
 		B61158DA2207486E00C28BAA /* APITargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITargetType.swift; sourceTree = "<group>"; };
 		B61158DC2207486E00C28BAA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		B61158DE2207486E00C28BAA /* APIManager+login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+login.swift"; sourceTree = "<group>"; };
-		B6DE6BB52207599E00D5880E /* DebugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPrint.swift; sourceTree = "<group>"; };
 		B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Parsing.swift"; sourceTree = "<group>"; };
 		B6DE6BBC220760F400D5880E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,7 +178,6 @@
 		B6DE6BB42207598D00D5880E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B6DE6BB52207599E00D5880E /* DebugPrint.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -369,7 +366,6 @@
 				B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */,
 				B611588E220061CC00C28BAA /* BaseViewController.swift in Sources */,
 				B611588C220061CC00C28BAA /* AppDelegate.swift in Sources */,
-				B6DE6BB62207599E00D5880E /* DebugPrint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

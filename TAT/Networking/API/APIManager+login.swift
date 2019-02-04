@@ -62,11 +62,17 @@ extension APIManager {
         .subscribe(onNext: { (token) in
           observer.onNext(token as AnyObject)
           observer.onCompleted()
-          self?.debugPrint("token is \(token)")
-          UserDefaults.standard.set(token, forKey: "token")
-        }, onError: { [weak self] (error) in
+          #if DEBUG
+          print("token is \(token)")
+          #endif
+          if let data = try? NSKeyedArchiver.archivedData(withRootObject: token, requiringSecureCoding: false) {
+             UserDefaults.standard.set(data, forKey: "token")
+          }
+        }, onError: { (error) in
           observer.onError(error)
-          self?.debugPrint("failed to login with: \(error)")
+          #if DEBUG
+          print("failed to login with: \(error)")
+          #endif
         })
       return Disposables.create()
     }
