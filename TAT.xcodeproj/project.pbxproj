@@ -13,6 +13,11 @@
 		B6115893220061D000C28BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6115892220061D000C28BAA /* Assets.xcassets */; };
 		B6115896220061D000C28BAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6115894220061D000C28BAA /* LaunchScreen.storyboard */; };
 		B61158A4220062E700C28BAA /* CurriculumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158A3220062E700C28BAA /* CurriculumViewController.swift */; };
+		B6DE6BAA22074B0900D5880E /* APIManager+login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DE2207486E00C28BAA /* APIManager+login.swift */; };
+		B6DE6BAB22074B0900D5880E /* APITargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DA2207486E00C28BAA /* APITargetType.swift */; };
+		B6DE6BAC22074B0900D5880E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DC2207486E00C28BAA /* APIManager.swift */; };
+		B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */; };
+		B6DE6BBD220760F400D5880E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BBC220760F400D5880E /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		B6115895220061D000C28BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6115897220061D000C28BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B61158A3220062E700C28BAA /* CurriculumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumViewController.swift; sourceTree = "<group>"; };
+		B61158DA2207486E00C28BAA /* APITargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITargetType.swift; sourceTree = "<group>"; };
+		B61158DC2207486E00C28BAA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B61158DE2207486E00C28BAA /* APIManager+login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+login.swift"; sourceTree = "<group>"; };
+		B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Parsing.swift"; sourceTree = "<group>"; };
+		B6DE6BBC220760F400D5880E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +79,13 @@
 		B611588A220061CC00C28BAA /* TAT */ = {
 			isa = PBXGroup;
 			children = (
-				B61158A02200620500C28BAA /* Supporting Files */,
-				B611589F220061FE00C28BAA /* ViewModels */,
+				B6DE6BB722075B1A00D5880E /* Extensions */,
+				B6DE6BB42207598D00D5880E /* Protocols */,
+				B61158D82207486E00C28BAA /* Networking */,
 				B611589E220061F600C28BAA /* Models */,
+				B6DE6BB022074E9A00D5880E /* ViewModels */,
 				B611589D220061EE00C28BAA /* ViewControllers */,
+				B61158A02200620500C28BAA /* Supporting Files */,
 				B6115897220061D000C28BAA /* Info.plist */,
 			);
 			path = TAT;
@@ -81,8 +94,8 @@
 		B611589D220061EE00C28BAA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B61158A22200629300C28BAA /* Curriculum */,
 				B61158A12200626D00C28BAA /* Base */,
+				B61158A22200629300C28BAA /* Curriculum */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -90,15 +103,9 @@
 		B611589E220061F600C28BAA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B6DE6BBC220760F400D5880E /* Token.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		B611589F220061FE00C28BAA /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		B61158A02200620500C28BAA /* Supporting Files */ = {
@@ -125,6 +132,62 @@
 				B61158A3220062E700C28BAA /* CurriculumViewController.swift */,
 			);
 			path = Curriculum;
+			sourceTree = "<group>";
+		};
+		B61158D82207486E00C28BAA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B61158DD2207486E00C28BAA /* API */,
+				B61158D92207486E00C28BAA /* Protocol */,
+				B61158DB2207486E00C28BAA /* Manager */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B61158D92207486E00C28BAA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B61158DA2207486E00C28BAA /* APITargetType.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B61158DB2207486E00C28BAA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B61158DC2207486E00C28BAA /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B61158DD2207486E00C28BAA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B61158DE2207486E00C28BAA /* APIManager+login.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B6DE6BB022074E9A00D5880E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B6DE6BB42207598D00D5880E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B6DE6BB722075B1A00D5880E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FC90B12D17269E3C7BEC7FA9 /* Pods */ = {
@@ -236,27 +299,35 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TAT/Pods-TAT-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -287,7 +358,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6DE6BBD220760F400D5880E /* Token.swift in Sources */,
+				B6DE6BAA22074B0900D5880E /* APIManager+login.swift in Sources */,
+				B6DE6BAB22074B0900D5880E /* APITargetType.swift in Sources */,
+				B6DE6BAC22074B0900D5880E /* APIManager.swift in Sources */,
 				B61158A4220062E700C28BAA /* CurriculumViewController.swift in Sources */,
+				B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */,
 				B611588E220061CC00C28BAA /* BaseViewController.swift in Sources */,
 				B611588C220061CC00C28BAA /* AppDelegate.swift in Sources */,
 			);
