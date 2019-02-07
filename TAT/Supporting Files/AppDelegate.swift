@@ -17,8 +17,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     window = UIWindow(frame: UIScreen.main.bounds)
     guard let window = window else { fatalError("no windows") }
-    window.rootViewController = CurriculumViewController()
+    //window.rootViewController = CurriculumViewController()
+    setUpTabBar(at: window)
     return true
+  }
+
+  // MARK: - Private Methods
+
+  private func setUpTabBar(at window: UIWindow) {
+    let tabBar = UITabBarController()
+    tabBar.viewControllers = [
+      CurriculumViewController(),
+      CalenderViewController(),
+      ActivityViewController(),
+      CreditViewController(),
+      SettingViewController()
+    ]
+    tabBar.tabBar.items?[0].title = "Curriculum"
+    tabBar.tabBar.items?[1].title = "Calender"
+    tabBar.tabBar.items?[2].title = "Activity"
+    tabBar.tabBar.items?[3].title = "Credit"
+    tabBar.tabBar.items?[4].title = "Setting"
+    window.rootViewController = tabBar
   }
 
 }
