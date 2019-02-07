@@ -9,7 +9,7 @@
 import Foundation
 import RxCocoa
 
-protocol FetchedItems: class {
+protocol FetchedItems: AnyObject {
 
   var items: BehaviorRelay<[Any]> { get }
   var currentPage: Int { get set }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol BaseViewModel: class {
+protocol BaseViewModel: AnyObject {
   associatedtype ViewModelType
   var viewModel: ViewModelType? { get set }
 }
