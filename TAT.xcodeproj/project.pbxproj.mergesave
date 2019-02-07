@@ -18,12 +18,13 @@
 		B6DE6BAC22074B0900D5880E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DC2207486E00C28BAA /* APIManager.swift */; };
 		B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */; };
 		B6DE6BBD220760F400D5880E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BBC220760F400D5880E /* Token.swift */; };
-		B6DE6BDD220BE7F000D5880E /* FetchedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BD8220BE7BF00D5880E /* FetchedItems.swift */; };
-		B6DE6BDE220BE7F000D5880E /* RxPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BD9220BE7BF00D5880E /* RxPagination.swift */; };
-		B6DE6BDF220BE7F000D5880E /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BDA220BE7BF00D5880E /* Pagination.swift */; };
-		B6DE6BE0220BE7F000D5880E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BDC220BE7BF00D5880E /* BaseViewModel.swift */; };
-		B6DE6BE1220BE7F000D5880E /* PaginationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BD4220BE7BF00D5880E /* PaginationViewModel.swift */; };
-		B6DE6BE2220BE7F000D5880E /* FetchedItemsBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BD5220BE7BF00D5880E /* FetchedItemsBaseViewModel.swift */; };
+		B61158BA2203474A00C28BAA /* NSObject+debugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158B92203474A00C28BAA /* NSObject+debugPrint.swift */; };
+		B61158BD220348C900C28BAA /* PaginationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158BC220348C900C28BAA /* PaginationViewModel.swift */; };
+		B61158BF2203491B00C28BAA /* FetchedItemsBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158BE2203491B00C28BAA /* FetchedItemsBaseViewModel.swift */; };
+		B61158C32203497200C28BAA /* FetchedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158C22203497200C28BAA /* FetchedItems.swift */; };
+		B61158C52203498500C28BAA /* RxPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158C42203498500C28BAA /* RxPagination.swift */; };
+		B61158C72203502400C28BAA /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158C62203502400C28BAA /* Pagination.swift */; };
+		B61158CA2203506800C28BAA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158C92203506800C28BAA /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,12 +43,13 @@
 		B61158DE2207486E00C28BAA /* APIManager+login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+login.swift"; sourceTree = "<group>"; };
 		B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Parsing.swift"; sourceTree = "<group>"; };
 		B6DE6BBC220760F400D5880E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		B6DE6BD4220BE7BF00D5880E /* PaginationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationViewModel.swift; sourceTree = "<group>"; };
-		B6DE6BD5220BE7BF00D5880E /* FetchedItemsBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedItemsBaseViewModel.swift; sourceTree = "<group>"; };
-		B6DE6BD8220BE7BF00D5880E /* FetchedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedItems.swift; sourceTree = "<group>"; };
-		B6DE6BD9220BE7BF00D5880E /* RxPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxPagination.swift; sourceTree = "<group>"; };
-		B6DE6BDA220BE7BF00D5880E /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
-		B6DE6BDC220BE7BF00D5880E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		B61158B92203474A00C28BAA /* NSObject+debugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+debugPrint.swift"; sourceTree = "<group>"; };
+		B61158BC220348C900C28BAA /* PaginationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationViewModel.swift; sourceTree = "<group>"; };
+		B61158BE2203491B00C28BAA /* FetchedItemsBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedItemsBaseViewModel.swift; sourceTree = "<group>"; };
+		B61158C22203497200C28BAA /* FetchedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedItems.swift; sourceTree = "<group>"; };
+		B61158C42203498500C28BAA /* RxPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxPagination.swift; sourceTree = "<group>"; };
+		B61158C62203502400C28BAA /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		B61158C92203506800C28BAA /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +94,14 @@
 			isa = PBXGroup;
 			children = (
 				B6DE6BB722075B1A00D5880E /* Extensions */,
-				B6DE6BD6220BE7BF00D5880E /* Protocol */,
+				B6DE6BB42207598D00D5880E /* Protocols */,
 				B61158D82207486E00C28BAA /* Networking */,
+				B61158B82203472A00C28BAA /* Extension */,
+				B61158C02203494300C28BAA /* Protocol */,
+				B611589F220061FE00C28BAA /* ViewModels */,
 				B611589E220061F600C28BAA /* Models */,
+				B6DE6BB022074E9A00D5880E /* ViewModels */,
 				B611589D220061EE00C28BAA /* ViewControllers */,
-				B6DE6BD2220BE7BF00D5880E /* ViewModels */,
 				B61158A02200620500C28BAA /* Supporting Files */,
 				B6115897220061D000C28BAA /* Info.plist */,
 			);
@@ -118,6 +123,14 @@
 				B6DE6BBC220760F400D5880E /* Token.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B611589F220061FE00C28BAA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B61158BB220348AB00C28BAA /* Pagination */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		B61158A02200620500C28BAA /* Supporting Files */ = {
@@ -180,54 +193,66 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		B6DE6BB022074E9A00D5880E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B6DE6BB42207598D00D5880E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		B6DE6BB722075B1A00D5880E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		B6DE6BD2220BE7BF00D5880E /* ViewModels */ = {
+		B61158B82203472A00C28BAA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				B6DE6BD3220BE7BF00D5880E /* Pagination */,
+				B61158B92203474A00C28BAA /* NSObject+debugPrint.swift */,
 			);
-			path = ViewModels;
+			path = Extension;
 			sourceTree = "<group>";
 		};
-		B6DE6BD3220BE7BF00D5880E /* Pagination */ = {
+		B61158BB220348AB00C28BAA /* Pagination */ = {
 			isa = PBXGroup;
 			children = (
-				B6DE6BD4220BE7BF00D5880E /* PaginationViewModel.swift */,
-				B6DE6BD5220BE7BF00D5880E /* FetchedItemsBaseViewModel.swift */,
+				B61158BC220348C900C28BAA /* PaginationViewModel.swift */,
+				B61158BE2203491B00C28BAA /* FetchedItemsBaseViewModel.swift */,
 			);
 			path = Pagination;
 			sourceTree = "<group>";
 		};
-		B6DE6BD6220BE7BF00D5880E /* Protocol */ = {
+		B61158C02203494300C28BAA /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				B6DE6BD7220BE7BF00D5880E /* Pagination */,
-				B6DE6BDB220BE7BF00D5880E /* Base */,
+				B61158C82203505700C28BAA /* Base */,
+				B61158C12203494900C28BAA /* Pagination */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		B6DE6BD7220BE7BF00D5880E /* Pagination */ = {
+		B61158C12203494900C28BAA /* Pagination */ = {
 			isa = PBXGroup;
 			children = (
-				B6DE6BD8220BE7BF00D5880E /* FetchedItems.swift */,
-				B6DE6BD9220BE7BF00D5880E /* RxPagination.swift */,
-				B6DE6BDA220BE7BF00D5880E /* Pagination.swift */,
+				B61158C22203497200C28BAA /* FetchedItems.swift */,
+				B61158C42203498500C28BAA /* RxPagination.swift */,
+				B61158C62203502400C28BAA /* Pagination.swift */,
 			);
 			path = Pagination;
 			sourceTree = "<group>";
 		};
-		B6DE6BDB220BE7BF00D5880E /* Base */ = {
+		B61158C82203505700C28BAA /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				B6DE6BDC220BE7BF00D5880E /* BaseViewModel.swift */,
+				B61158C92203506800C28BAA /* BaseViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -400,20 +425,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6DE6BDD220BE7F000D5880E /* FetchedItems.swift in Sources */,
-				B6DE6BDE220BE7F000D5880E /* RxPagination.swift in Sources */,
-				B6DE6BDF220BE7F000D5880E /* Pagination.swift in Sources */,
-				B6DE6BE0220BE7F000D5880E /* BaseViewModel.swift in Sources */,
-				B6DE6BE1220BE7F000D5880E /* PaginationViewModel.swift in Sources */,
-				B6DE6BE2220BE7F000D5880E /* FetchedItemsBaseViewModel.swift in Sources */,
 				B6DE6BBD220760F400D5880E /* Token.swift in Sources */,
 				B6DE6BAA22074B0900D5880E /* APIManager+login.swift in Sources */,
 				B6DE6BAB22074B0900D5880E /* APITargetType.swift in Sources */,
 				B6DE6BAC22074B0900D5880E /* APIManager.swift in Sources */,
 				B61158A4220062E700C28BAA /* CurriculumViewController.swift in Sources */,
 				B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */,
+				B61158CA2203506800C28BAA /* BaseViewModel.swift in Sources */,
+				B61158C52203498500C28BAA /* RxPagination.swift in Sources */,
 				B611588E220061CC00C28BAA /* BaseViewController.swift in Sources */,
+				B61158BF2203491B00C28BAA /* FetchedItemsBaseViewModel.swift in Sources */,
 				B611588C220061CC00C28BAA /* AppDelegate.swift in Sources */,
+				B61158BD220348C900C28BAA /* PaginationViewModel.swift in Sources */,
+				B61158C72203502400C28BAA /* Pagination.swift in Sources */,
+				B61158BA2203474A00C28BAA /* NSObject+debugPrint.swift in Sources */,
+				B61158C32203497200C28BAA /* FetchedItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
