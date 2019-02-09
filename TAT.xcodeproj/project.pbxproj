@@ -18,7 +18,8 @@
 		B6DE6BAC22074B0900D5880E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61158DC2207486E00C28BAA /* APIManager.swift */; };
 		B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */; };
 		B6DE6BBD220760F400D5880E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BBC220760F400D5880E /* Token.swift */; };
-		FC27236C2208A31C00911CE7 /* APIManager+curriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27236B2208A31C00911CE7 /* APIManager+curriculum.swift */; };
+		FC7060C4220F128700C2C3F4 /* APIManager+SemesterCurriculumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7060C3220F128700C2C3F4 /* APIManager+SemesterCurriculumList.swift */; };
+		FC7060C6220F129700C2C3F4 /* APIManager+SemesterCurriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7060C5220F129700C2C3F4 /* APIManager+SemesterCurriculum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +35,11 @@
 		B61158A3220062E700C28BAA /* CurriculumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumViewController.swift; sourceTree = "<group>"; };
 		B61158DA2207486E00C28BAA /* APITargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITargetType.swift; sourceTree = "<group>"; };
 		B61158DC2207486E00C28BAA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		B61158DE2207486E00C28BAA /* APIManager+login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+login.swift"; sourceTree = "<group>"; };
+		B61158DE2207486E00C28BAA /* APIManager+login.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "APIManager+login.swift"; sourceTree = "<group>"; tabWidth = 2; };
 		B6DE6BB822075B2C00D5880E /* Observable+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Parsing.swift"; sourceTree = "<group>"; };
 		B6DE6BBC220760F400D5880E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		FC27236B2208A31C00911CE7 /* APIManager+curriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+curriculum.swift"; sourceTree = "<group>"; };
+		FC7060C3220F128700C2C3F4 /* APIManager+SemesterCurriculumList.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "APIManager+SemesterCurriculumList.swift"; sourceTree = "<group>"; tabWidth = 2; };
+		FC7060C5220F129700C2C3F4 /* APIManager+SemesterCurriculum.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "APIManager+SemesterCurriculum.swift"; sourceTree = "<group>"; tabWidth = 2; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				B61158DE2207486E00C28BAA /* APIManager+login.swift */,
-				FC27236B2208A31C00911CE7 /* APIManager+curriculum.swift */,
+				FC7060C3220F128700C2C3F4 /* APIManager+SemesterCurriculumList.swift */,
+				FC7060C5220F129700C2C3F4 /* APIManager+SemesterCurriculum.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -364,7 +367,8 @@
 				B6DE6BBD220760F400D5880E /* Token.swift in Sources */,
 				B6DE6BAA22074B0900D5880E /* APIManager+login.swift in Sources */,
 				B6DE6BAB22074B0900D5880E /* APITargetType.swift in Sources */,
-				FC27236C2208A31C00911CE7 /* APIManager+curriculum.swift in Sources */,
+				FC7060C4220F128700C2C3F4 /* APIManager+SemesterCurriculumList.swift in Sources */,
+				FC7060C6220F129700C2C3F4 /* APIManager+SemesterCurriculum.swift in Sources */,
 				B6DE6BAC22074B0900D5880E /* APIManager.swift in Sources */,
 				B61158A4220062E700C28BAA /* CurriculumViewController.swift in Sources */,
 				B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */,
