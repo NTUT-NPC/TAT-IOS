@@ -20,6 +20,8 @@
 		B6DE6BBD220760F400D5880E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BBC220760F400D5880E /* Token.swift */; };
 		FC7060C4220F128700C2C3F4 /* APIManager+SemesterCurriculumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7060C3220F128700C2C3F4 /* APIManager+SemesterCurriculumList.swift */; };
 		FC7060C6220F129700C2C3F4 /* APIManager+SemesterCurriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7060C5220F129700C2C3F4 /* APIManager+SemesterCurriculum.swift */; };
+		FC7060C8220FD6FD00C2C3F4 /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7060C7220FD6FD00C2C3F4 /* Semester.swift */; };
+		FC7060CA220FEEA200C2C3F4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7060C9220FEEA200C2C3F4 /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		B6DE6BBC220760F400D5880E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		FC7060C3220F128700C2C3F4 /* APIManager+SemesterCurriculumList.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "APIManager+SemesterCurriculumList.swift"; sourceTree = "<group>"; tabWidth = 2; };
 		FC7060C5220F129700C2C3F4 /* APIManager+SemesterCurriculum.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "APIManager+SemesterCurriculum.swift"; sourceTree = "<group>"; tabWidth = 2; };
+		FC7060C7220FD6FD00C2C3F4 /* Semester.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; tabWidth = 2; };
+		FC7060C9220FEEA200C2C3F4 /* Course.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; tabWidth = 2; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				B6DE6BBC220760F400D5880E /* Token.swift */,
+				FC7060C7220FD6FD00C2C3F4 /* Semester.swift */,
+				FC7060C9220FEEA200C2C3F4 /* Course.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -364,7 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7060CA220FEEA200C2C3F4 /* Course.swift in Sources */,
 				B6DE6BBD220760F400D5880E /* Token.swift in Sources */,
+				FC7060C8220FD6FD00C2C3F4 /* Semester.swift in Sources */,
 				B6DE6BAA22074B0900D5880E /* APIManager+login.swift in Sources */,
 				B6DE6BAB22074B0900D5880E /* APITargetType.swift in Sources */,
 				FC7060C4220F128700C2C3F4 /* APIManager+SemesterCurriculumList.swift in Sources */,
