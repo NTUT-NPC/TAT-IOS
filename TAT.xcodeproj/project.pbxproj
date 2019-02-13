@@ -24,6 +24,10 @@
 		B6DE6BE0220BE7F000D5880E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BDC220BE7BF00D5880E /* BaseViewModel.swift */; };
 		B6DE6BE1220BE7F000D5880E /* PaginationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BD4220BE7BF00D5880E /* PaginationViewModel.swift */; };
 		B6DE6BE2220BE7F000D5880E /* FetchedItemsBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BD5220BE7BF00D5880E /* FetchedItemsBaseViewModel.swift */; };
+		B6DE6BEE220C73CF00D5880E /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BED220C73CF00D5880E /* CalenderViewController.swift */; };
+		B6DE6BF0220C741100D5880E /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BEF220C741100D5880E /* ActivityViewController.swift */; };
+		B6DE6BF2220C744300D5880E /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BF1220C744300D5880E /* CreditViewController.swift */; };
+		B6DE6BF4220C746F00D5880E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE6BF3220C746F00D5880E /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		B6DE6BD9220BE7BF00D5880E /* RxPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxPagination.swift; sourceTree = "<group>"; };
 		B6DE6BDA220BE7BF00D5880E /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		B6DE6BDC220BE7BF00D5880E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		B6DE6BED220C73CF00D5880E /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		B6DE6BEF220C741100D5880E /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		B6DE6BF1220C744300D5880E /* CreditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditViewController.swift; sourceTree = "<group>"; };
+		B6DE6BF3220C746F00D5880E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,10 @@
 			isa = PBXGroup;
 			children = (
 				B61158A12200626D00C28BAA /* Base */,
+				B6DE6BEC220C73B700D5880E /* Setting */,
+				B6DE6BEB220C734100D5880E /* Credit */,
+				B6DE6BEA220C732D00D5880E /* Activity */,
+				B6DE6BE9220C731900D5880E /* Calender */,
 				B61158A22200629300C28BAA /* Curriculum */,
 			);
 			path = ViewControllers;
@@ -230,6 +242,38 @@
 				B6DE6BDC220BE7BF00D5880E /* BaseViewModel.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		B6DE6BE9220C731900D5880E /* Calender */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE6BED220C73CF00D5880E /* CalenderViewController.swift */,
+			);
+			path = Calender;
+			sourceTree = "<group>";
+		};
+		B6DE6BEA220C732D00D5880E /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE6BEF220C741100D5880E /* ActivityViewController.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		B6DE6BEB220C734100D5880E /* Credit */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE6BF1220C744300D5880E /* CreditViewController.swift */,
+			);
+			path = Credit;
+			sourceTree = "<group>";
+		};
+		B6DE6BEC220C73B700D5880E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE6BF3220C746F00D5880E /* SettingViewController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		FC90B12D17269E3C7BEC7FA9 /* Pods */ = {
@@ -400,9 +444,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6DE6BEE220C73CF00D5880E /* CalenderViewController.swift in Sources */,
 				B6DE6BDD220BE7F000D5880E /* FetchedItems.swift in Sources */,
 				B6DE6BDE220BE7F000D5880E /* RxPagination.swift in Sources */,
+				B6DE6BF0220C741100D5880E /* ActivityViewController.swift in Sources */,
 				B6DE6BDF220BE7F000D5880E /* Pagination.swift in Sources */,
+				B6DE6BF4220C746F00D5880E /* SettingViewController.swift in Sources */,
 				B6DE6BE0220BE7F000D5880E /* BaseViewModel.swift in Sources */,
 				B6DE6BE1220BE7F000D5880E /* PaginationViewModel.swift in Sources */,
 				B6DE6BE2220BE7F000D5880E /* FetchedItemsBaseViewModel.swift in Sources */,
@@ -414,6 +461,7 @@
 				B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */,
 				B611588E220061CC00C28BAA /* BaseViewController.swift in Sources */,
 				B611588C220061CC00C28BAA /* AppDelegate.swift in Sources */,
+				B6DE6BF2220C744300D5880E /* CreditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
