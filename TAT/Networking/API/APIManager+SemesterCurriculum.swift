@@ -83,11 +83,6 @@ extension APIManager {
         }, onError: { (error) in
           #if DEBUG
           print("failed to fetch curriculum with: \(error)")
-          guard let error = error as? MoyaError else {
-            return
-          }
-          let owo = String(data: (error.response?.data)!, encoding: .utf8)
-          print(owo ?? "")
           #endif
         })
       return Disposables.create()
