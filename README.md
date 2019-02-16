@@ -12,8 +12,10 @@ TAT-IOS
 1. clone the project
 2. install homebrew, checkout [homebrew](https://brew.sh/) to install
 3. install ruby `brew install ruby@2.4`
+4. install XcodeGen `brew install xcodegen`
 4. install bundle `/usr/local/bin/gem install bundler`
 5. install all gems `bundle install`
+6. generate project `xcodegen generate`
 6. install CocoaPods gems `bundle exec pod install` 
 7. if swiftLint doesn't show the warnning, follew [swiftLint](https://github.com/realm/SwiftLint) to set up swiftLint
 
@@ -26,6 +28,8 @@ TAT-IOS
 * [Writing good commit messages](https://github.com/erlang/otp/wiki/writing-good-commit-messages)
   
 * [swift Styleguild](https://github.com/raywenderlich/swift-style-guide)
+
+* [XcodeGen](https://github.com/yonaskolb/XcodeGen)
 
 * [RxSwift](https://www.raywenderlich.com/900-getting-started-with-rxswift-and-rxcocoa)
 
