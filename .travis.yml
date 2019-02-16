@@ -8,9 +8,11 @@ cache:
 
 before_install:
   - brew update
+  - brew install xcodegen
   - bundle install
-  - pod repo update
-  - pod install
+  - xcodegen generate
+  - bundle exec pod repo update
+  - bundleexec pod install
 
 script:
   - xcodebuild -workspace TAT.xcworkspace -scheme TAT -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
