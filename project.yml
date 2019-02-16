@@ -1,0 +1,21 @@
+name: TAT # The name of the App
+options: # Some general settings for the project
+  bundleIdPrefix: jamfly
+  createIntermediateGroups: true # If the folders are nested, also nest the groups in Xcode
+  indentWidth: 2 # indent by 2 spaces
+  tabWidth: 2 # a tab is 2 spaces
+
+configFiles:
+  Debug: Configurations/Debug.xcconfig
+  Release: Configurations/Release.xcconfig
+
+targets: # The List of our targets
+  TAT:
+    type: application
+    platform: iOS
+    deploymentTarget: '11.0'
+    sources:
+      - path: TAT
+    prebuildScripts:
+      - name: Run SwiftLint
+        script: ${PODS_ROOT}/SwiftLint/swiftlint
