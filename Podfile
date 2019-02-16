@@ -11,7 +11,7 @@ target 'TAT' do
   pod 'RxCocoa'
   pod 'RxSwiftExt'  
   pod 'NSObject+Rx'
-  pod "RxGesture"
+  pod 'RxGesture'
   pod 'Moya/RxSwift', '~> 12.0'
   pod 'SwiftyJSON'
 
