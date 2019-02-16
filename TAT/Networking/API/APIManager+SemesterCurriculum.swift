@@ -39,6 +39,14 @@ extension APIType {
       return .get
     }
 
+    var headers: [String: String]? {
+      guard let token = UserDefaults.standard.string(forKey: "token") else {
+        print("QAQ")
+        return [:]
+      }
+      return ["Authorization": "Bearer " + token]
+    }
+
     var task: Task {
       var params: [String: Any] = [
         "year": year,
@@ -58,4 +66,31 @@ extension APIManager {
 
   // MARK: - Unwritten yet
 
+  func fetchSemesterCurriculum(year: String, semester: String, studentID: String?) -> Observable<AnyObject> {
+    let target = MultiTarget(APIType.SemesterCurriculum(year: year, semester: semester, studentID: studentID))
+    return Observable.create { [weak self] (observer) -> Disposable in
+      _ = self?.provider.rx.request(target)
+      .asObservable()
+      .filterSuccessfulStatusCodes()
+      .mapJSON()
+      .parseResponseDirectly(asType: [Course].self)
+        .subscribe(onNext: { (courses) in
+          observer.onNext(courses as AnyObject)
+          observer.onCompleted()
+          #if DEBUG
+          print("curriculum is \(courses)")
+          #endif
+        }, onError: { (error) in
+          #if DEBUG
+          print("failed to fetch curriculum with: \(error)")
+          guard let error = error as? MoyaError else {
+            return
+          }
+          let owo = String(data: (error.response?.data)!, encoding: .utf8)
+          print(owo ?? "")
+          #endif
+        })
+      return Disposables.create()
+    }
+  }
 }

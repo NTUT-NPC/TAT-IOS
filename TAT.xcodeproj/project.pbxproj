@@ -22,6 +22,7 @@
 		FC7060C6220F129700C2C3F4 /* APIManager+SemesterCurriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7060C5220F129700C2C3F4 /* APIManager+SemesterCurriculum.swift */; };
 		FC7060C8220FD6FD00C2C3F4 /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7060C7220FD6FD00C2C3F4 /* Semester.swift */; };
 		FC7060CA220FEEA200C2C3F4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7060C9220FEEA200C2C3F4 /* Course.swift */; };
+		FCCEFA1F2214A6C100CFBAB2 /* Periods.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCEFA1E2214A6C100CFBAB2 /* Periods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,7 @@
 		8F5C2CFAAD0EEFEE1F44C2F7 /* Pods-TAT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TAT/Pods-TAT.debug.xcconfig"; sourceTree = "<group>"; };
 		AF166502082DC6E66CD4E4D9 /* Pods_TAT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TAT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6115888220061CC00C28BAA /* TAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B611588B220061CC00C28BAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B611588B220061CC00C28BAA /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
 		B611588D220061CC00C28BAA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B6115892220061D000C28BAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6115895220061D000C28BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		FC7060C5220F129700C2C3F4 /* APIManager+SemesterCurriculum.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = "APIManager+SemesterCurriculum.swift"; sourceTree = "<group>"; tabWidth = 2; };
 		FC7060C7220FD6FD00C2C3F4 /* Semester.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; tabWidth = 2; };
 		FC7060C9220FEEA200C2C3F4 /* Course.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; tabWidth = 2; };
+		FCCEFA1E2214A6C100CFBAB2 /* Periods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Periods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				B6DE6BBC220760F400D5880E /* Token.swift */,
 				FC7060C7220FD6FD00C2C3F4 /* Semester.swift */,
 				FC7060C9220FEEA200C2C3F4 /* Course.swift */,
+				FCCEFA1E2214A6C100CFBAB2 /* Periods.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				B6DE6BB922075B2C00D5880E /* Observable+Parsing.swift in Sources */,
 				B611588E220061CC00C28BAA /* BaseViewController.swift in Sources */,
 				B611588C220061CC00C28BAA /* AppDelegate.swift in Sources */,
+				FCCEFA1F2214A6C100CFBAB2 /* Periods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

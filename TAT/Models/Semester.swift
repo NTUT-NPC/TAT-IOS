@@ -35,3 +35,15 @@ class Semester: NSObject, Codable {
     }
   }
 }
+
+// MARK: - Encodable
+
+extension Semester {
+
+  func encode(to encoder: Encoder) throws {
+    var container = encoder.container(keyedBy: SemesterKeys.self)
+
+    try container.encode(year, forKey: .year)
+    try container.encode(semester, forKey: .semester)
+  }
+}
