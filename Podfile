@@ -13,6 +13,7 @@ target 'TAT' do
   pod 'NSObject+Rx'
   pod 'RxGesture'
   pod 'Moya/RxSwift', '~> 12.0'
+  pod 'RxDataSources', '~> 3.0'
   pod 'SwiftyJSON'
 
   # UI
