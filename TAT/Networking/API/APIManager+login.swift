@@ -12,23 +12,18 @@ import RxCocoa
 import SwiftyJSON
 
 extension APIType {
-
   struct Login: APITargetType {
-
     // MARK: - Properties
-
     private var studentID: String = ""
     private var password: String = ""
 
     // MARK: - Initialization
-
     init(with studentID: String, and password: String) {
       self.studentID = studentID
       self.password = password
     }
 
     // MARK: - APITargetType
-
     var path: String {
       return "/api/login"
     }
@@ -50,7 +45,6 @@ extension APIType {
 }
 
 extension APIManager {
-
   func login(with studentID: String, and password: String) -> Observable<AnyObject> {
     let target = MultiTarget(APIType.Login(with: studentID, and: password))
     return Observable.create { [weak self] (observer) -> Disposable in
@@ -76,5 +70,4 @@ extension APIManager {
       return Disposables.create()
     }
   }
-
 }

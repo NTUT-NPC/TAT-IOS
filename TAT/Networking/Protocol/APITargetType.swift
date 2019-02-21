@@ -12,9 +12,7 @@ import Moya
 protocol APITargetType: TargetType {}
 
 extension APITargetType {
-
   // MARK: - TargetType
-
   var baseURL: URL {
     return URL(string: "https://api.ntut.club")!
   }

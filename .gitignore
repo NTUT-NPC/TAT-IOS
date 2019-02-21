@@ -9,8 +9,8 @@ build/*
 *.perspectivev3
 !default.perspectivev3
 *.xcodeproj
+*.xcworkspace
 
-# *.xcworkspace
 # !default.xcworkspace
 xcuserdata
 profile
