@@ -9,9 +9,7 @@
 import Foundation
 
 class Course: NSObject, Codable {
-
-  // MARK: - Property
-
+  // MARK: - Properties
   var name: String = ""
   var id: String = ""
   var instructor: [String] = []
@@ -27,7 +25,6 @@ class Course: NSObject, Codable {
   }
 
   // MARK: - Initialization
-
   required init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CourseKeys.self)
 
@@ -46,9 +43,7 @@ class Course: NSObject, Codable {
 }
 
 // MARK: - Encodable
-
 extension Course {
-
   func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: CourseKeys.self)
 

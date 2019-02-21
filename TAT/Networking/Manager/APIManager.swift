@@ -12,7 +12,6 @@ import Moya
 enum APIType { }
 
 final class APIManager: NSObject {
-
   static let shared = APIManager()
 
   enum Keys: String {

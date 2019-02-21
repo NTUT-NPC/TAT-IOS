@@ -9,9 +9,7 @@
 import Foundation
 
 class Periods: NSObject, Codable {
-
-    // MARK: - Property
-
+    // MARK: - Properties
     var sunday: [String] = []
     var monday: [String] = []
     var tuesday: [String] = []
@@ -31,7 +29,6 @@ class Periods: NSObject, Codable {
     }
 
     // MARK: - Initialization
-
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: PeriodKeys.self)
 
@@ -52,9 +49,7 @@ class Periods: NSObject, Codable {
 }
 
 // MARK: - Encodable
-
 extension Periods {
-
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: PeriodKeys.self)
 

@@ -9,9 +9,7 @@
 import Foundation
 
 class Semester: NSObject, Codable {
-
-  // MARK: - Property
-
+  // MARK: - Properties
   var year: String = ""
   var semester: String = ""
 
@@ -21,7 +19,6 @@ class Semester: NSObject, Codable {
   }
 
   // MARK: - Initialization
-
   required init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: SemesterKeys.self)
 
@@ -37,9 +34,7 @@ class Semester: NSObject, Codable {
 }
 
 // MARK: - Encodable
-
 extension Semester {
-
   func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: SemesterKeys.self)
 

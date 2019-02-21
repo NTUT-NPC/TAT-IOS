@@ -12,17 +12,13 @@ import RxCocoa
 import SwiftyJSON
 
 extension APIType {
-
   struct SemesterCurriculum: APITargetType {
-
     // MARK: - Properties
-
     private var studentID: String?
     private var year: String = ""
     private var semester: String = ""
 
     // MARK: - Initialization
-
     init(year: String, semester: String, studentID: String?) {
       self.year = year
       self.semester = semester
@@ -30,7 +26,6 @@ extension APIType {
     }
 
     // MARK: - APITargetType
-
     var path: String {
       return "/api/curriculums"
     }
@@ -41,7 +36,9 @@ extension APIType {
 
     var headers: [String: String]? {
       guard let token = UserDefaults.standard.string(forKey: "token") else {
-        print("QAQ")
+        #if DEBUG
+        print("failed to get auth token")
+        #endif
         return [:]
       }
       return ["Authorization": "Bearer " + token]
@@ -52,28 +49,23 @@ extension APIType {
         "year": year,
         "sem": semester
       ]
-
       params["targetStudentId"] = studentID
-
       return .requestParameters(parameters: params,
                                 encoding: URLEncoding.queryString)
     }
   }
-
 }
 
+// MARK: - Parsing method
 extension APIManager {
-
-  // MARK: - Unwritten yet
-
   func fetchSemesterCurriculum(year: String, semester: String, studentID: String?) -> Observable<AnyObject> {
     let target = MultiTarget(APIType.SemesterCurriculum(year: year, semester: semester, studentID: studentID))
     return Observable.create { [weak self] (observer) -> Disposable in
       _ = self?.provider.rx.request(target)
-      .asObservable()
-      .filterSuccessfulStatusCodes()
-      .mapJSON()
-      .parseResponseDirectly(asType: [Course].self)
+        .asObservable()
+        .filterSuccessfulStatusCodes()
+        .mapJSON()
+        .parseResponseDirectly(asType: [Course].self)
         .subscribe(onNext: { (courses) in
           observer.onNext(courses as AnyObject)
           observer.onCompleted()

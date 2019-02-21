@@ -12,21 +12,16 @@ import RxCocoa
 import SwiftyJSON
 
 extension APIType {
-
   struct SemesterCurriculumList: APITargetType {
-
     // MARK: - Properties
-
     private var studentID: String?
 
     // MARK: - Initialization
-
     init(with studentID: String?) {
       self.studentID = studentID
     }
 
     // MARK: - APITargetType
-
     var path: String {
       return "/api/curriculums"
     }
@@ -37,7 +32,9 @@ extension APIType {
 
     var headers: [String: String]? {
       guard let token = UserDefaults.standard.string(forKey: "token") else {
-        print("QAQ")
+        #if DEBUG
+        print("failed to get auth token")
+        #endif
         return [:]
       }
       return ["Authorization": "Bearer " + token]
@@ -46,16 +43,14 @@ extension APIType {
     var task: Task {
       var params: [String: Any] = [:]
       params["targetStudentId"] = studentID
-
       return .requestParameters(parameters: params,
                                 encoding: URLEncoding.queryString)
     }
   }
-
 }
 
+// MARK: - Parsing method
 extension APIManager {
-
   func fetchSemesterCurrirulumList(with studentID: String?) -> Observable<AnyObject> {
     let target = MultiTarget(APIType.SemesterCurriculumList(with: studentID))
     return Observable.create { [weak self] (observer) -> Disposable in
@@ -78,5 +73,4 @@ extension APIManager {
       return Disposables.create()
     }
   }
-
 }
