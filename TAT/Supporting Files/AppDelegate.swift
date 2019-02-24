@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     guard let window = window else { fatalError("no windows") }
     //window.rootViewController = CurriculumViewController()
     setUpTabBar(at: window)
+    IQKeyboardManager.shared.enable = true
     return true
   }
 

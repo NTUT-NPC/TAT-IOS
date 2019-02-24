@@ -18,6 +18,7 @@ target 'TAT' do
   # UI
   pod 'SnapKit'
   pod 'IQKeyboardManagerSwift'
+  pod 'FAPanels'
 
   # Help for project
   pod 'SwiftLint'
