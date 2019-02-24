@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     guard let window = window else { fatalError("no windows") }
 
     setUpDrawer(with: window)
+    setUpNavigationBar()
     setUpServices()
 
     return true
@@ -34,8 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       CurriculumViewController(),
       CalenderViewController(),
       ActivityViewController(),
-      CreditViewController(),
-      SettingViewController()
+      CreditViewController()
     ]
     tabBar.tabBar.items?[0].title = "Curriculum"
     tabBar.tabBar.items?[1].title = "Calender"
@@ -48,11 +48,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let centerVC = UINavigationController(rootViewController: setUpTabBar())
     let rootVC = FAPanelController()
     _ = rootVC.center(centerVC).left(SettingViewController())
+    rootVC.configs.leftPanelWidth = window.bounds.width * 0.6
     window.rootViewController = rootVC
   }
 
   private func setUpServices() {
     IQKeyboardManager.shared.enable = true
+  }
+
+  private func setUpNavigationBar() {
+    UINavigationBar.appearance().tintColor = UIColor.white
+    UINavigationBar.appearance().barTintColor = UIColor.navigationBarPurple()
   }
 
 }
