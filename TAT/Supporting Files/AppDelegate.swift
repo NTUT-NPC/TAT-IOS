@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
+import FAPanels
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,28 +19,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     window = UIWindow(frame: UIScreen.main.bounds)
     guard let window = window else { fatalError("no windows") }
-    //window.rootViewController = CurriculumViewController()
-    setUpTabBar(at: window)
+
+    setUpDrawer(with: window)
+    setUpNavigationBar()
+    setUpServices()
+
     return true
   }
 
   // MARK: - Private Methods
 
-  private func setUpTabBar(at window: UIWindow) {
+  private func setUpTabBar() -> UITabBarController {
     let tabBar = UITabBarController()
     tabBar.viewControllers = [
       CurriculumViewController(),
       CalenderViewController(),
       ActivityViewController(),
-      CreditViewController(),
-      SettingViewController()
+      CreditViewController()
     ]
     tabBar.tabBar.items?[0].title = "Curriculum"
     tabBar.tabBar.items?[1].title = "Calender"
     tabBar.tabBar.items?[2].title = "Activity"
     tabBar.tabBar.items?[3].title = "Credit"
-    tabBar.tabBar.items?[4].title = "Setting"
-    window.rootViewController = tabBar
+    return tabBar
+  }
+
+  private func setUpDrawer(with window: UIWindow) {
+    let centerVC = UINavigationController(rootViewController: setUpTabBar())
+    let rootVC = FAPanelController()
+    _ = rootVC.center(centerVC).left(SettingViewController())
+    rootVC.configs.leftPanelWidth = window.bounds.width * 0.6
+    window.rootViewController = rootVC
+  }
+
+  private func setUpServices() {
+    IQKeyboardManager.shared.enable = true
+  }
+
+  private func setUpNavigationBar() {
+    UINavigationBar.appearance().tintColor = UIColor.white
+    UINavigationBar.appearance().barTintColor = UIColor.navigationBarPurple
   }
 
 }

@@ -18,6 +18,9 @@ profile
 *.gcno
 *.gcda
 
+# AppCode
+.idea/*
+
 # Playground
 *.xctimeline
 
