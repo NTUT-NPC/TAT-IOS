@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   private func setUpNavigationBar() {
     UINavigationBar.appearance().tintColor = UIColor.white
-    UINavigationBar.appearance().barTintColor = UIColor.navigationBarPurple()
+    UINavigationBar.appearance().barTintColor = UIColor.navigationBarPurple
   }
 
 }

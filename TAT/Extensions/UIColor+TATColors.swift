@@ -9,7 +9,7 @@ import UIKit.UIColor
 
 extension UIColor {
 
-  class func navigationBarPurple() -> UIColor {
+  class var navigationBarPurple: UIColor {
     return UIColor(red: 113 / 255,
                    green: 108 / 255,
                    blue: 255 / 255,
