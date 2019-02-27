@@ -5,11 +5,12 @@
 //  Created by 神崎秀吉 on 2019/02/21.
 //
 
+// TODO: - Delete this file before push anything
 import Foundation
 
+// MARK: - Course
 class Course: NSObject, Codable {
-
-  // MARK: - Property
+  // MARK: - Properties
   var name: String = ""
   var id: String = ""
   var instructor: [String] = []
@@ -44,7 +45,6 @@ class Course: NSObject, Codable {
 
 // MARK: - Encodable
 extension Course {
-
   func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: CourseKeys.self)
 
@@ -56,9 +56,9 @@ extension Course {
   }
 }
 
+// MARK: - Periods
 class Periods: NSObject, Codable {
-
-  // MARK: - Property
+  // MARK: - Properties
   var sunday: [String] = []
   var monday: [String] = []
   var tuesday: [String] = []
@@ -99,7 +99,6 @@ class Periods: NSObject, Codable {
 
 // MARK: - Encodable
 extension Periods {
-
   func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: PeriodKeys.self)
 
@@ -113,10 +112,8 @@ extension Periods {
   }
 }
 
-import Foundation
-
+// MARK: - Semester
 class Semester: NSObject, Codable {
-
   // MARK: - Property
   var year: String = ""
   var semester: String = ""
@@ -143,7 +140,6 @@ class Semester: NSObject, Codable {
 
 // MARK: - Encodable
 extension Semester {
-
   func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: SemesterKeys.self)
 
