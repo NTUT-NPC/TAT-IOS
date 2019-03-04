@@ -24,7 +24,7 @@ class CurriculumViewController: BaseViewController {
     layout.scrollDirection = .vertical
     layout.minimumInteritemSpacing = 0
     layout.minimumLineSpacing = 0
-        layout.sectionInset = UIEdgeInsets(top: 2, left: 0, bottom: 2, right: 0)
+    layout.sectionInset = UIEdgeInsets(top: 2, left: 0, bottom: 2, right: 0)
 
     collectionView.translatesAutoresizingMaskIntoConstraints = true
     collectionView.backgroundColor = UIColor.white
@@ -46,12 +46,6 @@ class CurriculumViewController: BaseViewController {
         return collectionView.dequeueReusableCell(withReuseIdentifier: CurriculumCourseCollectionViewCell.reuseIdentifier, for: indexPath)
       }
 
-//      guard let name = item.name else {
-//        cell.courseNameLabel.text = ""
-//        cell.backgroundColor = UIColor.clear
-//        return cell
-//      }
-
       cell.courseNameLabel.text = item.name
       cell.backgroundColor = item.color
       return cell
@@ -67,6 +61,6 @@ extension CurriculumViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let width = collectionView.frame.width
     let cellCount: CGFloat = 7
-    return CGSize(width: (width * 0.95) / cellCount, height: (width * 0.95) / cellCount * 1.5)
+    return CGSize(width: (width * 0.95) / cellCount, height: (width * 0.95) / cellCount * 1.2)
   }
 }
