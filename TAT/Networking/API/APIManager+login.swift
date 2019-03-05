@@ -59,8 +59,6 @@ extension APIManager {
           #if DEBUG
           print("token is \(token)")
           #endif
-          guard let token = token as? Token else { return }
-          UserDefaults.standard.set(token.tokenString, forKey: "token")
         }, onError: { (error) in
           observer.onError(error)
           #if DEBUG

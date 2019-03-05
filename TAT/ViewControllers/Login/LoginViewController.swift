@@ -7,10 +7,14 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class LoginViewController: BaseViewController {
 
   // MARK: - Properties
+
+  private let bag = DisposeBag()
 
   private lazy var loginLabel: UILabel = {
     let loginLabel = UILabel(frame: .zero)
@@ -72,6 +76,7 @@ class LoginViewController: BaseViewController {
     setUpAvatar()
     setUpTextFields()
     setUpButtons()
+    setUpButtonsTap()
   }
 
   private func setUpLoginLabel() {
@@ -127,6 +132,35 @@ class LoginViewController: BaseViewController {
       make.right.equalTo(passwordTextField)
       make.width.equalTo(clearButton)
     }
+  }
+
+  private func setUpButtonsTap() {
+    clearButton.rx.tap
+      .subscribe { UserDefaults.standard.removeObject(forKey: "token") }
+      .disposed(by: bag)
+
+    storeButton.rx.tap
+      .subscribe { [weak self] _ in
+        guard let account = self?.accountTextField.text, let password = self?.passwordTextField.text else {
+          return
+        }
+        guard let this = self else { return }
+        DispatchQueue.global(qos: .userInteractive).async {
+          _ = APIManager.shared.login(with: account, and: password)
+            .subscribe(onNext: { (token) in
+              guard let token = token as? Token else { return }
+              UserDefaults.standard.set(token.tokenString, forKey: "token")
+            }, onError: { (error) in
+              #if DEBUG
+              print("failed to login \(error)")
+              #endif
+            })
+            .disposed(by: this.bag)
+        }
+
+      }
+      .disposed(by: bag)
+
   }
 
 }
