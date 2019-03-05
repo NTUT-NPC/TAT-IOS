@@ -14,8 +14,6 @@ class LoginViewController: BaseViewController {
 
   // MARK: - Properties
 
-  private let bag = DisposeBag()
-
   private lazy var loginLabel: UILabel = {
     let loginLabel = UILabel(frame: .zero)
     loginLabel.text = "login"
@@ -137,15 +135,16 @@ class LoginViewController: BaseViewController {
   private func setUpButtonsTap() {
     clearButton.rx.tap
       .subscribe { UserDefaults.standard.removeObject(forKey: "token") }
-      .disposed(by: bag)
+      .disposed(by: rx.disposeBag)
 
     storeButton.rx.tap
       .subscribe { [weak self] _ in
         guard let account = self?.accountTextField.text, let password = self?.passwordTextField.text else {
           return
         }
-        guard let this = self else { return }
-        DispatchQueue.global(qos: .userInteractive).async {
+
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+          guard let self = self else { return }
           _ = APIManager.shared.login(with: account, and: password)
             .subscribe(onNext: { (token) in
               guard let token = token as? Token else { return }
@@ -155,12 +154,11 @@ class LoginViewController: BaseViewController {
               print("failed to login \(error)")
               #endif
             })
-            .disposed(by: this.bag)
+            .disposed(by: self.rx.disposeBag)
         }
 
       }
-      .disposed(by: bag)
-
+      .disposed(by: rx.disposeBag)
   }
 
 }

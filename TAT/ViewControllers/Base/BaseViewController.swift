@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NSObject_Rx
 
 class BaseViewController: UIViewController {
 
