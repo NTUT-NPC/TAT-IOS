@@ -35,12 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       CurriculumViewController(),
       CalenderViewController(),
       ActivityViewController(),
-      CreditViewController()
+      LoginViewController()
     ]
     tabBar.tabBar.items?[0].title = "Curriculum"
     tabBar.tabBar.items?[1].title = "Calender"
     tabBar.tabBar.items?[2].title = "Activity"
-    tabBar.tabBar.items?[3].title = "Credit"
+    tabBar.tabBar.items?[3].title = "Login"
     return tabBar
   }
 
