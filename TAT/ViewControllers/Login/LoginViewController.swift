@@ -59,6 +59,12 @@ class LoginViewController: BaseViewController {
     return storeButton
   }()
 
+  private lazy var activityIndicator: UIActivityIndicatorView = {
+    let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    activityIndicator.color = UIColor.navigationBarPurple
+    return activityIndicator
+  }()
+
   // MARK: - Life Cycle
 
   override func viewDidLoad() {
@@ -75,6 +81,7 @@ class LoginViewController: BaseViewController {
     setUpTextFields()
     setUpButtons()
     setUpButtonsTap()
+    setUpActivityIndicator()
   }
 
   private func setUpLoginLabel() {
@@ -142,23 +149,32 @@ class LoginViewController: BaseViewController {
         guard let account = self?.accountTextField.text, let password = self?.passwordTextField.text else {
           return
         }
-
+        self?.activityIndicator.startAnimating()
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
           guard let self = self else { return }
           _ = APIManager.shared.login(with: account, and: password)
             .subscribe(onNext: { (token) in
               guard let token = token as? Token else { return }
               UserDefaults.standard.set(token.tokenString, forKey: "token")
+              self.activityIndicator.stopAnimating()
             }, onError: { (error) in
               #if DEBUG
               print("failed to login \(error)")
               #endif
+              self.activityIndicator.stopAnimating()
             })
             .disposed(by: self.rx.disposeBag)
         }
 
       }
       .disposed(by: rx.disposeBag)
+  }
+
+  private func setUpActivityIndicator() {
+    view.addSubview(activityIndicator)
+    activityIndicator.snp.makeConstraints { (make) in
+      make.center.equalToSuperview()
+    }
   }
 
 }
