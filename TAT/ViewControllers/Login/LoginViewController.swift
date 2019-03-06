@@ -14,6 +14,8 @@ class LoginViewController: BaseViewController {
 
   // MARK: - Properties
 
+  private let viewModel = LoginViewModel()
+
   private lazy var loginLabel: UILabel = {
     let loginLabel = UILabel(frame: .zero)
     loginLabel.text = "login"
@@ -65,12 +67,23 @@ class LoginViewController: BaseViewController {
     return activityIndicator
   }()
 
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  // MARK: - Initialization
+
+  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    super.init(nibName: nil, bundle: nil)
+  }
+
   // MARK: - Life Cycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor.white
     setUpLayouts()
+    setUpButtonsTap()
   }
 
   // MARK: - Private Methods
@@ -80,7 +93,6 @@ class LoginViewController: BaseViewController {
     setUpAvatar()
     setUpTextFields()
     setUpButtons()
-    setUpButtonsTap()
     setUpActivityIndicator()
   }
 
@@ -151,21 +163,10 @@ class LoginViewController: BaseViewController {
         }
         self?.activityIndicator.startAnimating()
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
-          guard let self = self else { return }
-          _ = APIManager.shared.login(with: account, and: password)
-            .subscribe(onNext: { (token) in
-              guard let token = token as? Token else { return }
-              UserDefaults.standard.set(token.tokenString, forKey: "token")
-              self.activityIndicator.stopAnimating()
-            }, onError: { (error) in
-              #if DEBUG
-              print("failed to login \(error)")
-              #endif
-              self.activityIndicator.stopAnimating()
-            })
-            .disposed(by: self.rx.disposeBag)
+          self?.viewModel.login(with: account,
+                                password: password,
+                                stopAnimation: self?.activityIndicator.stopAnimating)
         }
-
       }
       .disposed(by: rx.disposeBag)
   }
