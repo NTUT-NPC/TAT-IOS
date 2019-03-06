@@ -34,6 +34,8 @@ class LoginViewController: BaseViewController {
     let accountTextField = UITextField(frame: .zero)
     accountTextField.placeholder = "Plz enter your student id"
     accountTextField.borderStyle = .roundedRect
+    let account = UserDefaults.standard.string(forKey: "account")
+    accountTextField.text = account
     return accountTextField
   }()
 
@@ -153,7 +155,13 @@ class LoginViewController: BaseViewController {
 
   private func setUpButtonsTap() {
     clearButton.rx.tap
-      .subscribe { UserDefaults.standard.removeObject(forKey: "token") }
+      .subscribe { [weak self] _ in
+        self?.viewModel.clear()
+        DispatchQueue.main.async { [weak self] in
+          self?.accountTextField.text = nil
+          self?.passwordTextField.text = nil
+        }
+      }
       .disposed(by: rx.disposeBag)
 
     storeButton.rx.tap

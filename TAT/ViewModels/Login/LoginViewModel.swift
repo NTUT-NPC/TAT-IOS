@@ -8,15 +8,11 @@
 import RxSwift
 import RxCocoa
 
-class LoginViewModel {
+struct LoginViewModel {
 
   // MARK: - Properties
 
   private let bag = DisposeBag()
-
-  // MARK: - Initialization
-
-  init() { }
 
   // MARK: - Public Methods
 
@@ -28,6 +24,7 @@ class LoginViewModel {
     .subscribe(onNext: { (token) in
       guard let token = token as? Token else { return }
       UserDefaults.standard.set(token.tokenString, forKey: "token")
+      UserDefaults.standard.set(account, forKey: "account")
       stopAnimation()
     }, onError: { (error) in
       #if DEBUG
@@ -36,6 +33,11 @@ class LoginViewModel {
       stopAnimation()
     })
     .disposed(by: bag)
+  }
+
+  func clear() {
+    UserDefaults.standard.removeObject(forKey: "token")
+    UserDefaults.standard.removeObject(forKey: "account")
   }
 
 }
