@@ -88,6 +88,11 @@ class LoginViewController: BaseViewController {
     setUpButtonsTap()
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    touchIDLogin()
+  }
+
   // MARK: - Private Methods
 
   private func setUpLayouts() {
@@ -174,6 +179,7 @@ class LoginViewController: BaseViewController {
           self?.viewModel.login(with: account,
                                 password: password,
                                 stopAnimation: self?.activityIndicator.stopAnimating)
+
         }
       }
       .disposed(by: rx.disposeBag)
@@ -184,6 +190,12 @@ class LoginViewController: BaseViewController {
     activityIndicator.snp.makeConstraints { (make) in
       make.center.equalToSuperview()
     }
+  }
+
+  private func touchIDLogin() {
+    activityIndicator.startAnimating()
+    viewModel.loginWithAuth(with: activityIndicator.stopAnimating)
+    passwordTextField.text = UserDefaults.standard.string(forKey: "password")
   }
 
 }
