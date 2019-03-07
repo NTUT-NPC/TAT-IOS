@@ -90,7 +90,6 @@ class LoginViewController: BaseViewController {
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    touchIDLogin()
   }
 
   // MARK: - Private Methods
@@ -174,13 +173,12 @@ class LoginViewController: BaseViewController {
         guard let account = self?.accountTextField.text, let password = self?.passwordTextField.text else {
           return
         }
-        self?.activityIndicator.startAnimating()
-        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
-          self?.viewModel.login(with: account,
-                                password: password,
-                                stopAnimation: self?.activityIndicator.stopAnimating)
-
+        DispatchQueue.main.async {
+          self?.activityIndicator.startAnimating()
         }
+        self?.viewModel.login(with: account,
+                              password: password,
+                              stopAnimation: self?.activityIndicator.stopAnimating)
       }
       .disposed(by: rx.disposeBag)
   }
@@ -192,6 +190,10 @@ class LoginViewController: BaseViewController {
     }
   }
 
+  /*
+    wait till we know the use case
+    then put it inside `viewDidAppear`
+  */
   private func touchIDLogin() {
     activityIndicator.startAnimating()
     viewModel.loginWithAuth(with: activityIndicator.stopAnimating)
