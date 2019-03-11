@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import NSObject_Rx
 
 protocol FetchedItemsBaseViewModel: FetchedItems, RxPagination {
   func refresh() -> Observable<Int>

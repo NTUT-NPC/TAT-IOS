@@ -20,8 +20,6 @@ class PaginationViewModel: NSObject, FetchedItemsBaseViewModel {
   let canLoadMore = BehaviorRelay<Bool>(value: true)
   let isLoading = BehaviorRelay<Bool>(value: false)
 
-  private let bag = DisposeBag()
-
   // MARK: - Pagination
 
   let items = BehaviorRelay<[Any]>(value: [])
@@ -100,13 +98,13 @@ class PaginationViewModel: NSObject, FetchedItemsBaseViewModel {
         self?.updateCurrentStatusByFetchItemSuccessed(recieveItem, totalNum)
         self?.items.accept(self?.currentPage == 1 ? recieveItem : recieveItem + (self?.items.value ?? []))
       })
-      .disposed(by: bag)
+      .disposed(by: rx.disposeBag)
 
     Observable.merge(request.map { _ in true },
                      response.map { _ in false },
                      loadError.map { _ in false })
       .bind(to: isLoading)
-      .disposed(by: bag)
+      .disposed(by: rx.disposeBag)
   }
 
   // MARK: - subClass override
