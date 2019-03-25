@@ -13,9 +13,10 @@ import RxDataSources
 import SnapKit
 
 class CurriculumViewController: BaseViewController {
+
   // MARK: - Properties
+
   private lazy var curriculumViewModel = CurriculumViewModel()
-  private let disposeBag = DisposeBag()
 
   lazy var curriculumCollectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
@@ -28,12 +29,14 @@ class CurriculumViewController: BaseViewController {
 
     collectionView.translatesAutoresizingMaskIntoConstraints = true
     collectionView.backgroundColor = UIColor.white
-    collectionView.register(CurriculumCourseCollectionViewCell.self, forCellWithReuseIdentifier: CurriculumCourseCollectionViewCell.reuseIdentifier)
+    collectionView.register(CurriculumCourseCollectionViewCell.self,
+                            forCellWithReuseIdentifier: CurriculumCourseCollectionViewCell.reuseIdentifier)
 
     return collectionView
   }()
 
-  // MARK: - Life cycle
+  // MARK: - Life Cycle
+
   override func viewDidLoad() {
     super.viewDidLoad()
     view.addSubview(curriculumCollectionView)
@@ -51,16 +54,19 @@ class CurriculumViewController: BaseViewController {
       return cell
     })
 
-    curriculumViewModel.output.bind(to: self.curriculumCollectionView.rx.items(dataSource: dataSource)).disposed(by: self.disposeBag)
-    self.curriculumCollectionView.rx.setDelegate(self).disposed(by: self.disposeBag)
+    curriculumViewModel.output.bind(to: curriculumCollectionView.rx.items(dataSource: dataSource)).disposed(by: rx.disposeBag)
+    curriculumCollectionView.rx.setDelegate(self).disposed(by: rx.disposeBag)
   }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
+
 extension CurriculumViewController: UICollectionViewDelegateFlowLayout {
+
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let width = collectionView.frame.width
     let cellCount: CGFloat = 7
     return CGSize(width: (width * 0.95) / cellCount, height: (width * 0.95) / cellCount * 1.2)
   }
+
 }
