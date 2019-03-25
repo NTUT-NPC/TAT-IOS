@@ -14,11 +14,14 @@ struct SectionOfCourseInfo {
 }
 
 // MARK: - SectionModelType
+
 extension SectionOfCourseInfo: SectionModelType {
+
   typealias Item = CourseInfo
 
   init(original: SectionOfCourseInfo, items: [Item]) {
     self = original
     self.items = items
   }
+
 }
